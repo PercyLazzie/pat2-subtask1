@@ -6,7 +6,7 @@
 
 int main() {
     std::map<char, std::string> morseCodeMap;
-    morseCodeMap['A'] = ".-";
+    morseCodeMap['A'] = ".--";
     morseCodeMap['B'] = "-...";
     morseCodeMap['C'] = "-.-.";
     morseCodeMap['D'] = "-..";
