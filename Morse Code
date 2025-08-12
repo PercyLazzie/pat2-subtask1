@@ -54,7 +54,7 @@ int main() {
         fullMorseCodeMessage.resize(fullMorseCodeMessage.length() - 3);
     }
 
-    std::cout << "\n" << fullMorseCodeMessage << stt::endl;
+    std::cout << "\n" << fullMorseCodeMessage << std::endl;
 
     return 0;
 }
