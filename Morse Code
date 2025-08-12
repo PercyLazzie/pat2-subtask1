@@ -36,7 +36,7 @@ int main() {
     std::string message;
     std::string fullMorseCodeMessage = "";
 
-    std::cin << "Enter a short message: ";
+    std::cout << "Enter a short message: ";
     std::getline(std::cin, message);
 
     for (char character : message) {
