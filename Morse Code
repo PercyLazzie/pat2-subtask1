@@ -1,0 +1,60 @@
+#include <iostream>
+#include <string>
+#include <cctype>
+include <map>
+
+
+int main() {
+    std::map<char, std::string> morseCodeMap;
+    morseCodeMap['A'] = ".-";
+    morseCodeMap['B'] = "-...";
+    morseCodeMap['C'] = "-.-.";
+    morseCodeMap['D'] = "-..";
+    morseCodeMap['E'] = ".";
+    morseCodeMap['F'] = "..-.";
+    morseCodeMap['G'] = "--.";
+    morseCodeMap['H'] = "....";
+    morseCodeMap['I'] = "..";
+    morseCodeMap['J'] = ".---";
+    morseCodeMap['K'] = "-.-";
+    morseCodeMap['L'] = ".-..";
+    morseCodeMap['M'] = "--";
+    morseCodeMap['N'] = "-.";
+    morseCodeMap['O'] = "---";
+    morseCodeMap['P'] = ".--.";
+    morseCodeMap['Q'] = "--.-";
+    morseCodeMap['R'] = ".-.";
+    morseCodeMap['S'] = "...";
+    morseCodeMap['T'] = "-";
+    morseCodeMap['U'] = "..-";
+    morseCodeMap['V'] = "...-";
+    morseCodeMap['W'] = ".--";
+    morseCodeMap['X'] = "-..-";
+    morseCodeMap['Y'] = "-.--";
+    morseCodeMap['Z'] = "--..";
+
+    std::string message;
+    std::string fullMorseCodeMessage = "";
+
+    std::cin << "Enter a short message: ";
+    std::getline(std::cin, message);
+
+    for (char character : message) {
+       int upperChar = std::toupper(character);
+
+        if (morseCodeMap.count(upperChar)) {
+            std::cout << upperChar << ": " << morseCodeMap[upperChar] << std::endl;
+
+            fullMorseCodeMessage += morseCodeMap[upperChar];
+            fullMorseCodeMessage += "   ";
+        }
+    }
+
+    if (!fullMorseCodeMessage.empty()) {
+        fullMorseCodeMessage.resize(fullMorseCodeMessage.length() - 3);
+    }
+
+    std::cout << "\n" << fullMorseCodeMessage << stt::endl;
+
+    return 0;
+}
